@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 sample-maven/target/
 *.log
+.venv/
+__pycache__/
+*.pyc
+sample-maven/target/
+*.log

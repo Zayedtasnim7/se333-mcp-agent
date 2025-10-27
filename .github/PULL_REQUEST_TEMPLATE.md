@@ -1,40 +1,40 @@
-\## Summary
+﻿## Summary
 
 Explain what this PR changes and why.
 
 
 
-\## Changes
+## Changes
 
-\- \[ ] MCP tools (list)
+- [ ] MCP tools (list)
 
-\- \[ ] Tests added/updated
+- [ ] Tests added/updated
 
-\- \[ ] Docs/README updated
-
-
-
-\## Verification
-
-\- \[ ] `mvn -q -DskipTests=false test` passes locally
-
-\- \[ ] CI green (see badge below)
+- [ ] Docs/README updated
 
 
 
-\## Coverage
+## Verification
+
+- [ ] `mvn -q -DskipTests=false test` passes locally
+
+- [ ] CI green (see badge below)
+
+
+
+## Coverage
 
 If available, paste from `coverage\_summary(dir="sample-maven")`:
 
-\- Line: XX%
+- Line: XX%
 
-\- Branch: YY%
+- Branch: YY%
 
-\- HTML report: `sample-maven/target/site/jacoco/index.html`
+- HTML report: `sample-maven/target/site/jacoco/index.html`
 
 
 
-\## Screenshots / Logs (optional)
+## Screenshots / Logs (optional)
 
 <details>
 
@@ -52,13 +52,13 @@ If available, paste from `coverage\_summary(dir="sample-maven")`:
 
 
 
-\## Checklist
+## Checklist
 
-\- \[ ] No secrets/keys committed
+- [ ] No secrets/keys committed
 
-\- \[ ] No build artifacts committed
+- [ ] No build artifacts committed
 
-\- \[ ] PR title follows conventional commits (e.g., `feat:`, `fix:`, `chore:`)
+- [ ] PR title follows conventional commits (e.g., `feat:`, `fix:`, `chore:`)
 
 
 

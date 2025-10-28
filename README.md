@@ -1,4 +1,6 @@
-# SE333 MCP Testing Agent
+﻿# SE333 MCP Testing Agent
+
+[![Maven CI](https://github.com/Zayedtasnim7/se333-mcp-agent/actions/workflows/maven.yml/badge.svg)](https://github.com/Zayedtasnim7/se333-mcp-agent/actions/workflows/maven.yml)
 
 FastMCP server + tools:
 - list_java_methods(dir="sample-maven")

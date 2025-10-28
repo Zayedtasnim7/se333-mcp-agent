@@ -1,9 +1,42 @@
-# SE333 MCP Testing Agent
+﻿# SE333 MCP Testing Agent
+
+[![Maven CI](https://github.com/Zayedtasnim7/se333-mcp-agent/actions/workflows/maven.yml/badge.svg)](https://github.com/Zayedtasnim7/se333-mcp-agent/actions/workflows/maven.yml)
+
+[![Maven CI](https://github.com/Zayedtasnim7/se333-mcp-agent/actions/workflows/maven.yml/badge.svg)](https://github.com/Zayedtasnim7/se333-mcp-agent/actions/workflows/maven.yml)
 
 FastMCP server + tools:
 - list_java_methods(dir="sample-maven")
 - generate_basic_junit(class_name="Calc", method_name="add")
 - mvn_test(dir="sample-maven")
+
+## Highlights
+- 🤖 **AI Testing Agent (MCP)** — analyzes Java source, generates JUnit 5 tests, and runs them.
+- ✅ **CI/CD with GitHub Actions** — automatic `mvn test` on every push/PR.
+- 📈 **JaCoCo Coverage** — reports and HTML site; agent can summarize coverage in chat.
+- 🔁 **Git Automation Tools** — `git_status`, `git_add_all`, `git_commit(include_coverage)`, `git_push`, `git_pull_request`.
+- 🧩 **FastMCP + VS Code Chat** — use the tools from the Chat panel with auto-approve.
+
+### Tech Stack
+**Python (FastMCP), Java (Maven/JUnit 5), JaCoCo, GitHub Actions, VS Code**
+
+
+## Quickstart
+```bash
+# clone
+git clone https://github.com/Zayedtasnim7/se333-mcp-agent
+cd se333-mcp-agent
+
+# python env (uv or pip)
+uv venv && uv pip install fastmcp "mcp[cli]" httpx
+# OR: python -m venv .venv && .\.venv\Scripts\activate && pip install fastmcp "mcp[cli]" httpx
+
+# run MCP server (prints URL)
+python server.py   # default http://127.0.0.1:6060/mcp
+
+# VS Code → Cmd/Ctrl+Shift+P → "MCP: Add Server" → paste URL
+# Ask in Chat: list_java_methods(dir="sample-maven/src/main/java")
+
+
 
 ## Run
 .\.venv\Scripts\Activate.ps1

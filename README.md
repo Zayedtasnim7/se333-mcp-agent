@@ -20,6 +20,21 @@ FastMCP server + tools:
 **Python (FastMCP), Java (Maven/JUnit 5), JaCoCo, GitHub Actions, VS Code**
 
 
+## Quickstart
+```bash
+# clone
+git clone https://github.com/Zayedtasnim7/se333-mcp-agent
+cd se333-mcp-agent
+
+# python env (uv or pip)
+uv venv && uv pip install fastmcp "mcp[cli]" httpx
+# OR: python -m venv .venv && .\.venv\Scripts\activate && pip install fastmcp "mcp[cli]" httpx
+
+# run MCP server (prints URL)
+python server.py   # default http://127.0.0.1:6060/mcp
+
+# VS Code → Cmd/Ctrl+Shift+P → "MCP: Add Server" → paste URL
+# Ask in Chat: list_java_methods(dir="sample-maven/src/main/java")
 
 
 

@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\title{SE333 Final Project — Reflection}
+\author{Your Name}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{abstract}
+This short reflection summarizes the goals, methodology, results, and lessons learned while building an MCP-based testing agent for the SE333 final project. Keep this under two pages when compiled.
+\end{abstract}
+
+\section{Introduction}
+Briefly state the project goals: build an MCP server that generates, runs, and iterates unit tests to improve JaCoCo coverage for a Maven project.
+
+\section{Methodology}
+Describe the main components: the FastMCP server (`server.py`), Java test generation (`generate_basic_junit`), coverage analysis (`parse_jacoco`), and automation (git tools, CI).
+
+\section{Results}
+During development I ran the test suite and generated JaCoCo reports. Current results from `sample-maven/target/site/jacoco/jacoco.xml` (generated locally):
+
+\begin{itemize}
+  \item Line coverage: 100.00% (2/2 lines covered)
+  \item Branch coverage: N/A (no branch counters present)
+\end{itemize}
+
+Continuous Integration: the repository includes a GitHub Actions workflow (`.github/workflows/maven.yml`) which runs on push and PR using JDK 21 and executes `mvn -f sample-maven/pom.xml test`.
+
+\section{Lessons Learned}
+Short bullets about AI-assisted testing, limitations of naive test generation, and integration pitfalls.
+
+\section{Future Work}
+Mention planned extensions (spec-based test generation, AI code review agent, dashboard).
+
+\section{Appendix}
+Provide build instructions to reproduce the PDF and coverage report.
+\vspace{6pt}
+\textbf{How to build PDF:}
+\begin{verbatim}
+# On a system with LaTeX installed:
+pdflatex -interaction=nonstopmode -output-directory=docs docs/reflection.tex
+# Output: docs/reflection.pdf
+\end{verbatim}
+
+\end{document}

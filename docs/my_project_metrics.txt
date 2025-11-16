@@ -1,0 +1,52 @@
+============================================================
+PROJECT METRICS FOR REFLECTION
+============================================================
+
+MCP TOOLS COUNT:
+   Total Tools: 14
+
+COVERAGE STATISTICS:
+   INSTRUCTION: 100.0% (3/3)
+   LINE: 100.0% (1/1)
+   COMPLEXITY: 100.0% (1/1)
+   METHOD: 100.0% (1/1)
+   INSTRUCTION: 100.0% (4/4)
+   LINE: 100.0% (1/1)
+   COMPLEXITY: 100.0% (1/1)
+   METHOD: 100.0% (1/1)
+   INSTRUCTION: 100.0% (7/7)
+   LINE: 100.0% (2/2)
+   COMPLEXITY: 100.0% (2/2)
+   METHOD: 100.0% (2/2)
+   CLASS: 100.0% (1/1)
+   INSTRUCTION: 100.0% (7/7)
+   LINE: 100.0% (2/2)
+   COMPLEXITY: 100.0% (2/2)
+   METHOD: 100.0% (2/2)
+   CLASS: 100.0% (1/1)
+   INSTRUCTION: 100.0% (7/7)
+   LINE: 100.0% (2/2)
+   COMPLEXITY: 100.0% (2/2)
+   METHOD: 100.0% (2/2)
+   CLASS: 100.0% (1/1)
+   INSTRUCTION: 100.0% (7/7)
+   LINE: 100.0% (2/2)
+   COMPLEXITY: 100.0% (2/2)
+   METHOD: 100.0% (2/2)
+   CLASS: 100.0% (1/1)
+
+TEST FILES:
+   Total Test Classes: 1
+   CalcTest.java
+
+GIT COMMITS:
+   Total Commits: 12
+    c92b925 docs: add Quickstart to README
+    3f82148 docs: add Highlights to README
+    f12bab3 chore: add CI badge to README
+    c244cd4 chore: add CI badge to README
+    096f1b4 chore: add PR template
+
+============================================================
+SAVE THIS OUTPUT FOR YOUR REFLECTION
+============================================================

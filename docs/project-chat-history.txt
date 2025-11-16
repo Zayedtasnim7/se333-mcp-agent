@@ -1,0 +1,69 @@
+SE333 MCP Agent — Project Chat History
+
+This file summarizes the interactive work performed with the development assistant while preparing the SE333 final project. It documents key actions, files created/edited, commands run, verification steps, and next steps for submission.
+
+Date range: Oct–Nov 2025
+
+Key actions taken
+- Upgraded Maven project to Java 21 by editing `sample-maven/pom.xml` (maven.compiler.source/target = 21).
+- Implemented and verified FastMCP server tools in `server.py`:
+  - Java scanning/test generation: `list_java_methods`, `generate_basic_junit`.
+  - Maven integration: `mvn_test`, `mvn_coverage`, `coverage_summary`, `parse_jacoco`.
+  - Coverage iteration: `find_uncovered_methods`, `iterate_coverage`, `try_fix_known_bugs`.
+  - Git automation tools: `git_status`, `git_add_all`, `git_commit`, `git_push`, `git_pull_request`.
+  - Server runner prints MCP URL and serves on `http://127.0.0.1:6060/mcp` by default.
+
+Files created or edited by the assistant
+- Edited: `sample-maven/pom.xml` (set Java 21)
+- Created: `.github/prompts/tester.prompt.md` (agent prompt)
+- Created: `docs/reflection.tex` (LaTeX reflection template; updated with coverage numbers)
+- Created: `.github/workflows/validate-submission.yml` (PR comment warning if artifacts missing)
+- Created: `.github/workflows/enforce-submission.yml` (blocking workflow: fails PR if artifacts missing)
+- Created: `docs/demo_script.md` (demo recording checklist)
+- Created: `scripts/demo_runner.py` (programmatic demo runner that calls `server.py` tools)
+- Updated: `README.md` (documented demo runner and submission notes)
+- Verified: `sample-maven/target/site/jacoco/jacoco.xml` present and parsed (coverage: 100% line coverage for sample project)
+
+Commands run (local verification)
+- Checked/ran Maven and report:
+  mvn -q -e test
+  mvn -q -e test jacoco:report
+  (These generated target/site/jacoco/jacoco.xml and HTML report.)
+
+- Verified Java runtime in the environment (example output observed earlier):
+  OpenJDK version "25.0.1" 2025-10-21 LTS (Temurin)
+
+- Started MCP server (manual):
+  python server.py
+  -> prints: Starting MCP server at http://127.0.0.1:6060/mcp
+
+- Demo runner (script):
+  python scripts/demo_runner.py
+  (runs: coverage_summary -> find_uncovered_methods -> generate_basic_junit -> mvn_test -> coverage_summary)
+
+Notes about MCP server URL
+- The server prints the URL using the template: `http://{host}:{port}{path}` where host defaults to 127.0.0.1, port defaults to 6060, path is /mcp. This is correct and should not be changed.
+- Use VS Code: Ctrl+Shift+P -> "MCP: Add Server" -> paste the URL to connect the Chat view to the server.
+
+Submission checklist (what's left)
+- Add a compiled PDF of the reflection: `docs/reflection.pdf` (compile `docs/reflection.tex` with pdflatex or use Overleaf).
+- Record a 4–6 minute demo video (follow `docs/demo_script.md`) and upload or include link in repository or submission.
+- Optional: personalize `docs/reflection.tex` with your name and final notes; the assistant can fill a draft for you.
+
+Reproducible steps to validate locally
+1. Activate Python venv
+   .\.venv\Scripts\Activate.ps1
+2. Install dependencies (if not using uv):
+   pip install fastmcp mcp[cli] httpx
+3. Start MCP server
+   python server.py
+4. In another terminal, run tests and coverage for Maven project
+   mvn -f sample-maven/pom.xml test jacoco:report
+5. Run the demo runner (optional)
+   python scripts/demo_runner.py
+
+Contact notes
+- If you want the assistant to compile the LaTeX to PDF, note that `pdflatex` must be installed on the machine or use Overleaf and upload the PDF.
+- The assistant added a blocking CI workflow that will fail PRs missing `docs/reflection.pdf` and `.github/prompts/tester.prompt.md`. If you prefer non-blocking checks, remove `enforce-submission.yml` and keep `validate-submission.yml`.
+
+End of chat history summary.

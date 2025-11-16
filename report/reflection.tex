@@ -1,0 +1,55 @@
+% Auto-generated reflection.tex (IEEEtran)
+\documentclass[conference]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\begin{document}
+\title{Reflection Report: MCP Testing Agent}
+\author{Your Name}
+\maketitle
+
+\begin{abstract}\small
+This reflection summarizes the MCP testing agent, the coverage improvements achieved, and lessons learned from AI-assisted development.
+\end{abstract}
+\section{Introduction}
+# Project Metrics & Data\
+\section{Methodology}
+The MCP agent was used to:
+\begin{itemize}
+\item 	exttt{Total MCP tools: 14}
+\item 	exttt{list_java_methods(dir=".")}
+\item 	exttt{generate_basic_junit(class_name, method_name, dir="sample-maven")}
+\item 	exttt{mvn_test(dir="sample-maven")}
+\item 	exttt{mvn_coverage(dir="sample-maven")}
+\item 	exttt{parse_jacoco(xml_path="sample-maven/target/site/jacoco/jacoco.xml")}
+\item 	exttt{coverage_summary(dir="sample-maven")}
+\item 	exttt{git_status(dir=".")}
+\item 	exttt{git_add_all(dir=".")}
+\item 	exttt{git_commit(message, dir=".", include_coverage=False, coverage_dir="sample-maven")}
+\item 	exttt{git_push(remote="origin", branch=None, dir=".")}
+\item 	exttt{git_pull_request(...)}
+\item 	exttt{find_uncovered_methods(dir="sample-maven")}
+\item 	exttt{try_fix_known_bugs(dir="sample-maven")}
+\item 	exttt{iterate_coverage(dir="sample-maven", max_rounds=3)}
+\end{itemize}
+\section{Results and Discussion}
+\subsection{Coverage Summary}
+\begin{itemize}
+\item Instruction Coverage: 100% (7/7)
+\item Line Coverage:        100% (2/2)
+\item Complexity Coverage:  100% (2/2)
+\item Method Coverage:      100% (2/2)
+\item Class Coverage:       100% (1/1)
+\item Initial coverage: 0% (no tests for `Calc`)
+\item Final coverage:   100% after using the MCP testing agent
+\item Improvement:      +100 percentage points
+\end{itemize}
+\subsection{AI-assisted Development}
+The agent generated tests and automated coverage iterations; the main insight was that AI helps find trivial unit tests but required manual guidance for edge cases.
+\section{Challenges and Lessons Learned}
+Key challenges included configuring JaCoCo reporting, handling encoding differences on Windows, and iterating prompts to produce reliable tests.
+\section{Recommendations}
+Future work: extend the agent to handle multi-module projects, add mutation testing (PIT), and automate PDF compilation in CI when TeX is available.
+
+\end{document}
